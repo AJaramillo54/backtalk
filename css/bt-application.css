@@ -1,0 +1,106 @@
+.btalk::before {
+  border-top-color: #FFA200;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-style: solid;
+  border-width: 1em .75em 0 .75em; }
+
+.btalk::after {
+  margin-left: -8.75em; }
+
+.btalk.bt-right::after {
+  margin-left: -5em; }
+
+.btalk.bt-left::after {
+  margin-left: -11.75em; }
+
+.btalk.bt-pill::after, .btalk.bt-round::after,
+.btalk.bt-thought::after {
+  padding: 1.5em; }
+
+.btalk {
+  cursor: help;
+  position: relative;
+  border-color: #727A7D; }
+
+.btalk::before,
+.btalk::after {
+  position: absolute;
+  left: 50%;
+  opacity: 0;
+  z-index: -100;
+  font-family: Rokkit, serif; }
+
+.btalk:hover::before,
+.btalk:focus::before,
+.btalk:hover::after,
+.btalk:focus::after {
+  opacity: 1;
+  z-index: 100; }
+
+.btalk:hover::after,
+.btalk:focus::after,
+.btalk:hover::before,
+.btalk:focus::before {
+  -webkit-transform: scale(1) translateY(0);
+  transform: scale(1) translateY(0); }
+
+.btalk::before {
+  bottom: 100%;
+  margin-left: -.75em;
+  content: "";
+  -webkit-transform: scale(0.6) translateY(-90%);
+  transform: scale(0.6) translateY(-90%);
+  -webkit-transition: all 0.65s cubic-bezier(0.85, -0.18, 0.31, 1.26), opacity 0.65s 0.5s;
+  transition: all 0.65s cubic-bezier(0.85, -0.18, 0.31, 1.26), opacity 0.65s 0.5s; }
+
+.btalk:hover::before,
+.btalk:focus::before {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s; }
+
+.btalk::after {
+  background-color: #FFA200;
+  bottom: 180%;
+  border-radius: 0.5em;
+  width: 17.5em;
+  padding: 1em;
+  color: #FFF;
+  content: attr(data-btalk);
+  -webkit-transform: scale(0.6) translateY(50%);
+  transform: scale(0.6) translateY(50%);
+  -webkit-transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26) 0.2s;
+  transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26) 0.2s; }
+
+.btalk:hover::after,
+.btalk:focus::after {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s; }
+
+.btalk.bt-border::after {
+  border: #727A7D solid 5px; }
+
+.btalk.bt-border::before {
+  border-color: #727A7D transparent transparent transparent; }
+
+.btalk.bt-pill::after {
+  border-radius: 10em; }
+
+.btalk.bt-rect::after {
+  border-radius: 0; }
+
+.btalk.bt-round::after,
+.btalk.bt-thought::after {
+  border-radius: 50%;
+  text-align: center; }
+
+.btalk.bt-thought::before {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  bottom: 110%;
+  border: none;
+  background-color: #FFA200; }
+
+/*# sourceMappingURL=bt-application.css.map */

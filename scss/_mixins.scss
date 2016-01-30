@@ -1,0 +1,19 @@
+@mixin hideShow ($opacity, $z){
+  opacity: $opacity;
+  z-index: $z;
+}
+
+@mixin transform ($scale: 1, $translateY: 0) {
+  -webkit-transform: scale($scale) translateY($translateY);
+  transform: scale($scale) translateY($translateY);
+}
+
+@mixin transition ($transition...){
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+
+@mixin transition-delay($del...){
+  -webkit-transition-delay: $del;
+  transition-delay: $del;
+}

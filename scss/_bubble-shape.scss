@@ -1,0 +1,25 @@
+.btalk.bt-pill::after {
+  @extend %x-padding;
+  border-radius: 10em;
+}
+
+.btalk.bt-rect::after {
+  border-radius: 0;
+}
+
+.btalk.bt-round::after,
+.btalk.bt-thought::after{
+  @extend %x-padding;
+  border-radius: 50%;
+  text-align: center;
+}
+
+//Thought bubble
+.btalk.bt-thought::before {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  bottom: 110%;
+  border: none;
+  background-color: $bg-color;
+}

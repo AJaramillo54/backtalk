@@ -1,0 +1,7 @@
+.btalk.bt-right::after {
+  @extend %bubble-right;
+}
+
+.btalk.bt-left::after {
+  @extend %bubble-left;
+}

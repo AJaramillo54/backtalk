@@ -1,0 +1,59 @@
+.btalk {
+  cursor: help;
+  position: relative;
+  border-color: $br-color;
+}
+
+.btalk::before,
+.btalk::after {
+  position: absolute;
+  left: 50%;
+  @include hideShow(0, -100);
+  font-family: $font;
+}
+
+.btalk:hover::before,
+.btalk:focus::before,
+.btalk:hover::after,
+.btalk:focus::after {
+  @include hideShow(1, 100);
+}
+.btalk:hover::after,
+.btalk:focus::after,
+.btalk:hover::before,
+.btalk:focus::before {
+  @include transform();
+}
+
+//Speech Bubble Tail
+.btalk::before {
+  @extend %border--before;
+  bottom: 100%;
+  margin-left: -.75em;
+  content: "";
+  @include transform(0.6, -90%);
+  @include transition(all .65s cubic-bezier(.85, -0.18, .31, 1.26), opacity .65s .5s);
+}
+
+.btalk:hover::before,
+.btalk:focus::before {
+  @include transition-delay(.2s);
+}
+//Speech Bubble
+.btalk::after {
+  @extend %bubble-center;
+  background-color: $bg-color;
+  bottom: 180%;
+  border-radius: $br-radius;
+  width: $bubble-width;
+  padding: 1em;
+  color: $txt-color;
+  content: attr(data-btalk);
+  @include transform(0.6, 50%);
+  @include transition(all .65s cubic-bezier(.84, -0.18, .31, 1.26) .2s);
+}
+
+.btalk:hover::after,
+.btalk:focus::after {
+  @include transition-delay(0s);
+}

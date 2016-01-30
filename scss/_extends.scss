@@ -1,0 +1,24 @@
+%border--before {
+  border-top-color: $tail-color;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-style: $br-style;
+  border-width: 1em .75em 0 .75em;
+}
+
+%bubble-center {
+  margin-left: -8.75em;
+}
+
+%bubble-right {
+  margin-left: -5em;
+}
+
+%bubble-left {
+  margin-left: -11.75em;
+}
+
+%x-padding {
+  padding: 1.5em;
+}

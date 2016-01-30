@@ -1,0 +1,6 @@
+.btalk.bt-border::after {
+  border: $br-color $br-style $br-width;
+}
+.btalk.bt-border::before {
+  border-color: $br-color transparent transparent transparent;
+}
